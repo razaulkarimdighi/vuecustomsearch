@@ -1,16 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+   <h1> {{ title }}</h1>
+    <NavbarTop></NavbarTop>
+    <CustomSearch></CustomSearch>
+  </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import NavbarTop from "./components/NavbarTop.vue"
+import CustomSearch from "./components/CustomSearch.vue";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data(){
+    return{
+      title: "Hurray! Our vue apps are running!",
+
+    }
+  },
+  components:{
+    NavbarTop,
+    CustomSearch
+  },
+  
 }
 </script>
 
